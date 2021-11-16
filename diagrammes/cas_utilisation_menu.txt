@@ -1,0 +1,14 @@
+@startuml
+package MenuPrincipal{
+usecase "Nouvelle Partie"
+usecase "Charger Partie"
+usecase "Parametres"
+usecase "Credits"
+usecase "Quitter"
+}
+:Joueur: --> (Nouvelle Partie)
+:Joueur: --> (Charger Partie)
+:Joueur: --> (Parametres)
+:Joueur: --> (Credits)
+:Joueur: --> (Quitter)
+@enduml
