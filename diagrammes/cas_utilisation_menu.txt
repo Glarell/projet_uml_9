@@ -5,10 +5,14 @@ usecase "Charger Partie"
 usecase "Parametres"
 usecase "Credits"
 usecase "Quitter"
+usecase "Rejoindre partie"
+usecase "Lancer partie"
 }
 :Joueur: --> (Nouvelle Partie)
 :Joueur: --> (Charger Partie)
 :Joueur: --> (Parametres)
 :Joueur: --> (Credits)
 :Joueur: --> (Quitter)
+:Joueur: --> (Rejoindre partie)
+(Nouvelle Partie) .> (Lancer partie) : <<extends>>
 @enduml
