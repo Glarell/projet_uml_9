@@ -1,0 +1,14 @@
+@startuml
+(*) --> "Obtenir Code Invitation"
+"Obtenir Code Invitation" --> "Inserer Code Invitation"
+if "code valide" then
+-->[false] "Inserer Code Invitation"
+else
+-->[true] "Verifier place dans salon"
+if "placeDansSalon > 1" then
+-->[true] "Partie rejoint"
+else
+-->[false] "Avertir utilisateur salon plein"
+"Avertir utilisateur salon plein" --> (*)
+"Partie rejoint" --> (*)
+@enduml
