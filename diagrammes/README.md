@@ -5,7 +5,7 @@ Vous trouverez l'ensemble de ces diagrammes :
 ## Cas d'utilisations
  - Menu principal
  - Dans le jeu (pendant une partie) 
-
+ - Changer parametres
 ## Sequences
 
 ## Etats-transitions
