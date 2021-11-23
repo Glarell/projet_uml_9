@@ -1,0 +1,13 @@
+@startuml
+(*) --> "Créer une nouvelle partie"
+"Créer une nouvelle partie" --> "Choisir type de partie"
+if "type=solo" then
+-->[true] "Lancer partie"
+else
+-->[false] "Créer salon"
+"Créer salon" --> "Générer Code Invitation"
+"Générer Code Invitation" --> Attendre (sablier)
+if "nbJoueurDansSalon==4" then
+-->[true] "Lancer partie"
+"Lancer partie" --> (*)
+@enduml
