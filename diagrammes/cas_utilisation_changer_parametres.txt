@@ -2,8 +2,7 @@
 package Parametres{
 usecase "Audio"
 usecase "Video"
-usecase "Configuration"
-usecase "Version"
+usecase "Configurer"
 usecase "Clavier"
 usecase "Manette"
 usecase "Sauvegarder"
@@ -11,13 +10,12 @@ usecase "Quitter parametre"
 }
 :Joueur: --> (Audio)
 :Joueur: --> (Video)
-:Joueur: --> (Configuration)
-(Configuration) <|-- (Clavier)
-(Configuration) <|-- (Manette)
-:Joueur: --> (Version)
-(Sauvegarder) <. (Clavier) <<extends>>
-(Sauvegarder) <. (Manette) <<extends>>
-(Sauvegarder) <. (Video) <<extends>>
-(Sauvegarder) <. (Audio) <<extends>>
+:Joueur: --> (Configurer)
+(Configurer) <|-- (Clavier)
+(Configurer) <|-- (Manette)
+(Sauvegarder) <. (Clavier) : <<extends>>
+(Sauvegarder) <. (Manette) : <<extends>>
+(Sauvegarder) <. (Video) : <<extends>>
+(Sauvegarder) <. (Audio) : <<extends>>
 :Joueur: --> (Quitter parametre)
 @enduml
