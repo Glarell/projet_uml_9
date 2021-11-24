@@ -15,3 +15,8 @@ Vous trouverez l'ensemble de ces diagrammes :
 ## Activités
  - Créer une partie
  - Rejoindre une partie
+ - Reparer
+ - Se soigner
+ - Soigner
+ - Déplacer
+ - Emprisonner
