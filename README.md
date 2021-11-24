@@ -1,4 +1,4 @@
-~# Projet UML
+# Projet UML
 
 La société d’édition de jeux vidéo, Have Fun. désire lancer une nouvelle gamme de jeux vidéo.
 
