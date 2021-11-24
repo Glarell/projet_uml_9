@@ -1,0 +1,17 @@
+@startuml
+(*) --> "Verifier etat equipement vaisseau"
+if "etat == endommage" then
+--> [true] "Lancer reparation"
+else
+--> [false] (*)
+endif
+"Lancer reparation" --> "Lancer QTE"
+if "QTE est reussi" then
+--> [true] "Verifier etat equipement vaisseau"
+else
+--> [false] "Produire du bruit"
+"Produire du bruit" --> "Lancer reparation"
+"Lancer QTE" --> "Annuler reparation"
+endif
+"Annuler reparation" --> (*)
+@enduml
