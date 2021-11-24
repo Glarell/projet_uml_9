@@ -1,0 +1,14 @@
+@startuml
+(*) --> "Obtenir liste des parties sauvegardees"
+if "size(liste) > 0" then
+--> [true] "Afficher liste parties sauvegardees"
+else
+--> [false] (*)
+"Afficher liste parties sauvegardees" --> "selectionner une sauvegarde"
+"selectionner une sauvegarde" --> "confirmer choix"
+if "choix == oui" then
+--> [true] "lancer partie"
+else
+--> [false] "Afficher liste parties sauvegardees"
+"lancer partie" --> (*)
+@enduml
