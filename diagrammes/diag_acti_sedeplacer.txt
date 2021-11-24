@@ -1,0 +1,13 @@
+@startuml
+(*) --> [gauche,droite,avant,arriere] Appui Bouton Deplacement
+if VieJoueur > 0 then
+  --> [true] if collision then
+    --> [true] Deplacer Joueur
+    --> (*)
+  else
+    --> [false] (*)
+  endif
+else
+  --> [false] (*)
+endif
+@enduml

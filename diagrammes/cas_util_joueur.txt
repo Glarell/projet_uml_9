@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+actor "Joueur" as j
+rectangle Fonctionnalites_en_jeu {
+  j --> (Mettre en pause)
+  j --> (Quitter)
+  j --> (Interagir)
+  (Utiliser Accessoire) --> (Utilisation Accessoire) #line.dotted : extends
+  (Recuperer Accessoire) --> (Utilisation Accessoire) #line.dotted : extends
+  (Utilisation Accessoire) --> (Interagir) #line.dotted : extends
+  (Se soigner) --> (Interagir) #line.dotted : extends
+  (Soigner) --> (Interagir) #line.dotted : extends
+  (Tuer) --> (Interagir) #line.dotted : extends
+  (Reparer) --> (Interagir) #line.dotted : extends
+  (Attaquer) --> (Interagir) #line.dotted : extends
+  (Emprisonner) --> (Interagir) #line.dotted : extends
+  (Se deplacer) --> (Interagir) #line.dotted : extends
+  (QTE) --> (Interagir) #line.dotted : extends
+}
+@enduml

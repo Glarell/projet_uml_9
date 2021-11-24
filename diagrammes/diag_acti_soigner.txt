@@ -1,0 +1,12 @@
+@startuml
+(*) --> Appui Soigner
+if VieJoueur2 < 3 then
+  --> [true] Soigner Joueur2 +1
+  --> Avertir Joueur2 du Soin
+  --> Avertir Joueur1 du soin
+  --> (*)
+else
+  --> [false] Avertir Utilisateur Sante Pleine
+  --> (*)
+endif
+@enduml

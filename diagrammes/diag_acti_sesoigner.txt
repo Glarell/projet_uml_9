@@ -1,0 +1,17 @@
+@startuml
+(*) --> Appui SeSoigner
+if vie < 3 then
+  --> [true] if "kits restants > 0" then
+    -> [true] Soigner Joueur
+    --> Consommer un Kit
+    --> Avertir Utilisateur du Soin
+    --> (*)
+    else
+    -> [false] Avertir Utilisateur Manque Kits
+    --> (*)
+    endif
+else
+  --> [false] "Avertir Utilisateur Sante Pleine"
+  --> (*)
+endif
+@enduml

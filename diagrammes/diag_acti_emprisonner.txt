@@ -1,0 +1,21 @@
+@startuml
+(*) --> Appui Emprisonner
+if nbCages >= 3 and phase = 3 then
+  -> [true] if phase = 3 then
+    --> [true] if alienAPortee then
+        --> [true] Emprisonner Alien
+        --> Terminer Partie
+        --> Avertir Utilisateur Reussite
+        --> (*)
+    else
+      --> [false] Avertir Utilisateur Trop Loin
+      --> (*)
+    endif
+  else
+    --> [false] (*)
+  endif
+else
+  --> [false] Avertir Utilisateurs
+  --> (*)
+endif
+@enduml
