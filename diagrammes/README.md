@@ -21,5 +21,5 @@ Vous trouverez l'ensemble de ces diagrammes :
  - Déplacer
  - Emprisonner
 
-##Séquence 
+## Séquence 
  - Attaque Alien avec QTE réussi et raté
