@@ -8,7 +8,8 @@ group while NbReparations > 0
   Joueur -> Joueur : FaireQTE
   alt QTEreussi
     Joueur --> Systeme : QTEreussi
-    Systeme -> Systeme : Reparer(1)
+    Joueur --> Systeme : RoleJoueur
+    Systeme -> Systeme : Reparer(roleJoueur,1)
     Systeme --> Systeme :  NbReparations - 1
   else QTErate
     Joueur --> Systeme -- : QTErate
