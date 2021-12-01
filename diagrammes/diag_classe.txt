@@ -1,0 +1,56 @@
+@startuml
+
+title Diagramme de classe
+
+class Partie {
+code : String
+durée : int
+}
+
+class Joueur{
+pseudo : String
+nbVie : int
+}
+
+enum Etat{
+EnVie
+Mort
+Eblouit
+Emprisonne
+}
+
+class Alien {
+nbVue : int
+statue : Etat
+}
+
+class Accessoire {
+nom : String
+description : String
+nbUtilisation: int
+portee : int
+}
+
+class Caractéristique {
+nom : String
+description : String
+}
+
+class Section {
+nom : String
+}
+
+class Degat {
+nbQTENecessaire : int
+}
+
+Joueur "*"--"*" Caractéristique
+Joueur "0..1"--"*" Accessoire
+
+Partie "1"--"1..4" Joueur
+Partie "1"--"1" Alien
+Partie "1"--"10" Section
+Section "1..2"--"*" Accessoire
+Section "1"--"0..1" Degat
+
+@enduml
