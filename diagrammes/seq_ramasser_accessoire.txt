@@ -1,0 +1,22 @@
+@startuml
+
+Participant Joueur as J
+Participant Accessoire as A
+Participant Systeme as S
+
+J -> A ++ : RamasserAccessoire
+Activate J
+A -> S ++ : Ramassage
+alt Possède déjà un objet
+S -> J : DeposerAccessoire
+J --> S
+end
+
+S -> J : AttribuerAccessoire(ac)
+J --> S
+S --> A --
+A --> J --
+
+Deactivate J
+
+@enduml
