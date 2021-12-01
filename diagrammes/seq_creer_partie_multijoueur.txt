@@ -3,28 +3,48 @@ actor "Joueur 1"
 participant Systeme
 participant Serveur
 actor "Joueur 2"
+activate "Joueur 1"
 "Joueur 1" -> Systeme ++ : Creer partie multijoueur
+activate "Joueur 1"
 Systeme -> Serveur ++: Allouer un serveur
+activate Systeme
 Serveur --> Systeme --: Serveur disponible
+deactivate Systeme
 Systeme -> Systeme : Creation salon
-Systeme -> Systeme : Generation code invitation
+activate Systeme
+Systeme --> Systeme : Generation code invitation
+deactivate Systeme
 Systeme --> "Joueur 1" -- : Salon cree
+deactivate "Joueur 1"
 "Joueur 1"-> Systeme ++: Obtenir code invitation
+activate "Joueur 1"
 Systeme --> "Joueur 1" --: code invitation
+deactivate "Joueur 1"
 "Joueur 1" -> "Joueur 2" ++: donner code invitation
+activate "Joueur 1"
 "Joueur 2" --> "Joueur 1" --
+deactivate "Joueur 1"
 "Joueur 2" -> Systeme ++ : rejoindre partie
+activate "Joueur 2"
 Systeme --> "Joueur 2" --
+deactivate "Joueur 2"
 "Joueur 2" -> Systeme ++ : inserer code
+activate "Joueur 2"
 Systeme -> Serveur ++ : verifier code
+activate Systeme
 Serveur --> Systeme -- : code valide
+deactivate Systeme
 Systeme --> "Joueur 2" -- : code invitation valide
+deactivate "Joueur 2"
 
 alt nbJoueursDansSalon == 4
 "Joueur 1" -> Systeme ++ : Lancer partie
+activate "Joueur 1"
 loop pour chaque joueur dans salon
 Systeme -> Systeme : Lancer jeu
 end
 Systeme --> "Joueur 1" --
+deactivate "Joueur 1"
 end
+deactivate "Joueur 1"
 @enduml
