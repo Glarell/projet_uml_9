@@ -1,0 +1,19 @@
+@startuml
+participant Systeme as S
+participant Vaisseau as V
+V ++
+V -> V : endommagerPiece
+V --> V
+V -> V : verifEtat
+V --> V : VaisseauDetruit
+V -> S ++ : detruireVaisseau
+S -> S : detruireVaisseau
+S --> S
+S -> S : Notifier les joueurs
+S --> S
+S -> S : Terminer la partie
+S --> S
+S --> V
+V --
+S --
+@enduml
