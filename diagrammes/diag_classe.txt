@@ -31,7 +31,7 @@ nbUtilisation: int
 portee : int
 }
 
-class Caractéristique {
+class Caracteristique {
 nom : String
 description : String
 }
@@ -44,7 +44,7 @@ class Degat {
 nbQTENecessaire : int
 }
 
-Joueur "*"--"*" Caractéristique
+Joueur "*"--"*" Caractristique
 Joueur "0..1"--"*" Accessoire
 
 Partie "1"--"1..4" Joueur
