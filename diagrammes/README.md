@@ -20,3 +20,6 @@ Vous trouverez l'ensemble de ces diagrammes :
  - Soigner
  - Déplacer
  - Emprisonner
+
+##Séquence 
+ - Attaque Alien avec QTE réussi et raté
