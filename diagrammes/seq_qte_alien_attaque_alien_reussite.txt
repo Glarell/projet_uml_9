@@ -1,0 +1,23 @@
+@startuml
+Alien ++
+Alien -> Systeme ++ : CommencerChasse
+Systeme --> Alien
+Alien -> Systeme : SeDeplacer
+Systeme --> Alien
+Alien -> Systeme : Attaquer(n)
+Systeme -> Joueur ++ : Attaquer(n)
+Systeme -> Joueur : LancementQTE
+Joueur -> Joueur : FaireQTE
+alt QTE reussi
+  Joueur --> Systeme : AttaqueRatee
+  Systeme --> Alien : AttaqueRatee
+else QTE rate
+  Joueur -> Joueur : PerdreVie(n)
+  Joueur --> Systeme : AttaqueReussie
+  Joueur --
+  Systeme --> Alien : AttaqueReussie
+  Systeme --
+end
+Alien --
+
+@enduml
