@@ -23,3 +23,4 @@ Vous trouverez l'ensemble de ces diagrammes :
 
 ## Séquence 
  - Attaque Alien avec QTE réussi et raté
+ - Test QTE pour réparer un élément
