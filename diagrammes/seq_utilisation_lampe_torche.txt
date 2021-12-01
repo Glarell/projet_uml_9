@@ -1,0 +1,24 @@
+@startuml
+
+Participant Joueur as J
+Participant Accessoire as Ac
+Participant Systeme as S
+Participant Alien as Al
+
+Activate J
+J -> Ac ++ : UtiliserAccessoire
+Ac -> S ++ : UtiliserEffet
+S -> J : LancementQTE
+J -> J : FaireQTE
+
+alt QTE reussi
+J --> S : reussite
+S -> Al ++ : ParaliserAlien
+Al --> S --
+else QTE rate
+J --> S : echec
+end
+S --> Ac
+Ac --> J
+
+@enduml
