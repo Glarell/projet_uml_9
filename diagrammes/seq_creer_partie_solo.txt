@@ -1,0 +1,11 @@
+@startuml
+actor "Joueur"
+participant Systeme
+participant Serveur
+"Joueur" -> Systeme ++ : Creer partie solo
+Systeme -> Serveur ++: Allouer un serveur
+Serveur --> Systeme --: Serveur disponible
+Systeme -> Systeme : Creation salon
+Systeme --> Systeme : Generation code invitation
+Systeme --> "Joueur" -- : Lancement de la partie
+@enduml
