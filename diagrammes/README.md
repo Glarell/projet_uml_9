@@ -27,3 +27,4 @@ Vous trouverez l'ensemble de ces diagrammes :
  - Utilisation lampe torche sur l'Alien
  - Génération des dégats sur le vaisseau pour la phase 2
  - Scénario de créer une partie, avec 4 joueurs
+ - Scénario de créer une partie solo
