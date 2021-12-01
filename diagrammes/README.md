@@ -31,3 +31,4 @@ Vous trouverez l'ensemble de ces diagrammes :
  - Détruire le vaisseau si trop de dégats
  - Scénario de répartir les rôles lors de la création d’une partie
  - Ramassage d'un accessoire
+ - Attaquer l'alien (calcul des dégats avec ou sans arme)
