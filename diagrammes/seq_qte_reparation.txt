@@ -1,0 +1,18 @@
+@startuml
+Joueur ++
+Joueur -> Systeme ++ : Reparer(obj)
+Systeme -> Systeme : VerifEtatObjet
+Systeme --> Systeme : NbReparations
+group while NbReparations > 0
+  Systeme -> Joueur : LancerQTE
+  Joueur -> Joueur : FaireQTE
+  alt QTEreussi
+    Joueur --> Systeme : QTEreussi
+    Systeme -> Systeme : Reparer(1)
+    Systeme --> Systeme :  NbReparations - 1
+  else QTErate
+    Joueur --> Systeme -- : QTErate
+    Systeme --
+  end
+end
+@enduml
