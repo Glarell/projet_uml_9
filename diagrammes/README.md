@@ -25,3 +25,4 @@ Vous trouverez l'ensemble de ces diagrammes :
  - Attaque Alien avec QTE réussi et raté
  - Test QTE pour réparer un élément
  - Utilisation lampe torche sur l'Alien
+ - Génération des dégats sur le vaisseau pour la phase 2
