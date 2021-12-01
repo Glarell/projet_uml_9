@@ -1,0 +1,21 @@
+@startuml
+participant Joueur as J
+participant Systeme as S
+participant Alien as A
+J ++
+J -> J : AttaquerAlien
+J -> S ++ : AlienQuelleDistance
+S --> J : Distance
+alt JoueurProcheAlien
+  J -> J : evaluationDegats (nu + objet)
+  J --> J : degats
+  J -> S : infligerDegatsAlien(degats)
+  S -> A ++ : ingligerDegats(degats)
+  A --> S
+  A --
+else JoueurNonProche
+  S --> J : TropLoin
+  J --
+  S --
+end
+@enduml
