@@ -1,10 +1,10 @@
 # Diagrammes
 
-Vous trouverez l'ensemble de ces diagrammes : 
+Vous trouverez l'ensemble de ces diagrammes :
 
 ## Cas d'utilisations
  - Menu principal
- - Dans le jeu (pendant une partie) 
+ - Dans le jeu (pendant une partie)
  - Changer parametres
 ## Sequences
 
@@ -21,6 +21,7 @@ Vous trouverez l'ensemble de ces diagrammes :
  - Déplacer
  - Emprisonner
 
-## Séquence 
+## Séquence
  - Attaque Alien avec QTE réussi et raté
  - Test QTE pour réparer un élément
+ - Utilisation lampe torche sur l'Alien
