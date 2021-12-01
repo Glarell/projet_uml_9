@@ -1,0 +1,19 @@
+@startuml
+Participant Systeme as S
+Participant Vaisseau as V
+S ++
+S -> S : Lancer Phase 2
+S --> S
+S -> S : Generer Degats Phase 2
+S --> S : NbDegatsAGenerer
+group while NbDegatsAGenerer > 0
+  S -> S : TrouverPieceVaisseauAleatoire
+  S --> S : PieceVaisseau
+  S -> V ++: InfligerDegats(PieceVaisseau,1)
+  V --> S
+  V --
+  S --> S : NbDegatsAGenerer - 1
+end
+S --
+
+@enduml
