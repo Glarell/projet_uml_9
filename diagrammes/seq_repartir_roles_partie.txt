@@ -1,0 +1,17 @@
+@startuml
+participant Systeme
+participant Caracteristique 
+actor Joueur
+loop pour chaque joueur
+activate Systeme
+Systeme -> Caracteristique ++ : obtenir un role aleatoire
+activate Systeme
+Caracteristique --> Systeme -- : role
+deactivate Systeme
+Systeme -> Joueur ++ : Attribuer role
+activate Systeme
+Joueur --> Systeme -- 
+deactivate Systeme
+end
+deactivate Systeme
+@enduml

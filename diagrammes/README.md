@@ -29,3 +29,4 @@ Vous trouverez l'ensemble de ces diagrammes :
  - Scénario de créer une partie, avec 4 joueurs
  - Scénario de créer une partie solo
  - Détruire le vaisseau si trop de dégats
+ - Scénario de répartir les rôles lors de la création d’une partie
