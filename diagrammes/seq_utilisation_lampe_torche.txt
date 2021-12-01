@@ -5,8 +5,8 @@ Participant Accessoire as Ac
 Participant Systeme as S
 Participant Alien as Al
 
-Activate J
 J -> Ac ++ : UtiliserAccessoire
+Activate J
 Ac -> S ++ : UtiliserEffet
 S -> J : LancementQTE
 J -> J : FaireQTE
@@ -18,7 +18,9 @@ Al --> S --
 else QTE rate
 J --> S : echec
 end
-S --> Ac
-Ac --> J
+S --> Ac --
+Ac --> J --
+
+Deactivate J
 
 @enduml
