@@ -8,6 +8,10 @@ Vous trouverez l'ensemble de ces diagrammes :
  - Changer parametres
 
 ## Etats-transitions
+ - Joueur
+ - Vaisseau
+ - Partie
+ - Alien
 
 ## Classes
 

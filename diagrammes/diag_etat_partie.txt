@@ -1,0 +1,17 @@
+@startuml
+
+state EnAttente : recherche d'autres joueurs
+state EnCours
+state EnPause
+state Terminé
+
+[*] -> EnAttente 
+EnAttente -> EnCours : commencer la partie
+EnCours -> EnPause : mettre en pause
+EnPause -> EnCours : reprendre la partie
+EnCours --> Terminé : alien mort ou emprisonné
+EnCours --> Terminé : plus de joueurs en vie
+
+Terminé --> [*]
+
+@enduml
