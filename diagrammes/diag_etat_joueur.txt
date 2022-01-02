@@ -1,0 +1,15 @@
+@startuml
+
+state SantéPleine : nbVie == 3
+state Blessé : nbVie > 0 et nbVie < 3
+state Mort : nbVie == 0
+
+[*] -> SantéPleine
+Blessé -> SantéPleine : utiliser kit de soin (nbVie == 2)
+SantéPleine -> Blessé : rater un QTE d'esquive (nbVie > 1)
+Blessé -> Mort : rater un QTE d'esquive (nbVie == 1)
+SantéPleine --> [*]
+Blessé --> [*]
+Mort --> [*]
+
+@enduml

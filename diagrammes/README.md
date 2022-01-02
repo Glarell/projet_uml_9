@@ -6,9 +6,12 @@ Vous trouverez l'ensemble de ces diagrammes :
  - Menu principal
  - Dans le jeu (pendant une partie)
  - Changer parametres
-## Sequences
 
 ## Etats-transitions
+ - Joueur
+ - Vaisseau
+ - Partie
+ - Alien
 
 ## Classes
 

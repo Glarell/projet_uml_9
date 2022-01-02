@@ -1,0 +1,18 @@
+@startuml
+state Mort : nbVie == 0
+
+state EnVie {
+ state SantéPleine : nbVie == 10
+ state Blessé : nbVie > 0 et nbVie < 10
+}
+
+[*] -> SantéPleine
+SantéPleine -> Blessé : réussir un QTE d'attaque (nbVie > 1)
+EnVie --> Eblouit : utilisation de la lampe
+Eblouit --> EnVie : après 3 sec
+Blessé --> Mort : réussir un QTE d'attaque (nbVie == 1)
+EnVie -> Emprisonné : utilisation de la cage
+
+Emprisonné --> [*]
+Mort --> [*]
+@enduml

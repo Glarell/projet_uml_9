@@ -7,15 +7,19 @@ usecase "Clavier"
 usecase "Manette"
 usecase "Sauvegarder"
 usecase "Quitter parametre"
+usecase "Annuler"
+usecase "Validation"
 }
 :Joueur: --> (Audio)
 :Joueur: --> (Video)
 :Joueur: --> (Configurer)
 (Configurer) <|-- (Clavier)
 (Configurer) <|-- (Manette)
-(Sauvegarder) <. (Clavier) : <<extends>>
-(Sauvegarder) <. (Manette) : <<extends>>
-(Sauvegarder) <. (Video) : <<extends>>
-(Sauvegarder) <. (Audio) : <<extends>>
+(Validation) <.. (Clavier) : <<extends>>
+(Validation) <.. (Manette) : <<extends>>
+(Validation) <.. (Video) : <<extends>>
+(Validation) <.. (Audio) : <<extends>>
+(Validation) <|-- (Annuler)
+(Validation) <|-- (Sauvegarder)
 :Joueur: --> (Quitter parametre)
 @enduml

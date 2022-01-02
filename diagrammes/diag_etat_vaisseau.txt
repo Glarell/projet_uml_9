@@ -1,0 +1,10 @@
+@startuml
+
+[*] -> Décollage
+Décollage -> EnVoyage : lancement du vaisseau
+EnVoyage -> Atterrissage : toutes les pièces du vaisseau sont réparées
+
+EnVoyage --> [*]
+Atterrissage --> [*]
+
+@enduml
